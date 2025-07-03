@@ -44,10 +44,13 @@ const handleLogout = () => {
 <style scoped>
 .sidebar {
   width: 220px;
-  background-color: #2E3238;
+  background-color: rgba(46, 50, 56, 0.8);
   color: white;
   display: flex;
   flex-direction: column;
+  border-radius: 8px;
+  margin: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar-header {
@@ -74,7 +77,7 @@ const handleLogout = () => {
 }
 
 .nav-item.active {
-  background-color: #3A3F45;
+  background-color: rgba(58, 63, 69, 0.73);
   color: white;
 }
 

@@ -1,5 +1,7 @@
 @import './base.css';
-
+body {
+    cursor: url('../assets/custom-cursor.ico'), auto;
+}
 #app {
   max-width: 1280px;
   margin: 0 auto;

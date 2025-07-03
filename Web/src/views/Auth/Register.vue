@@ -159,7 +159,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(-45deg, #ff6b77, #f566ff, #0630d6, #1194b2);
+  background: linear-gradient(-45deg, rgba(255, 107, 107, 0.82), rgba(245, 102, 255, 0.76), rgba(6, 48, 214, 0.7), rgba(17, 148, 178, 0.77));
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   border-radius: 8px;

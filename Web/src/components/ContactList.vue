@@ -1,5 +1,5 @@
 <template>
-  <div class="contact-list">
+  <div class="contact-list horizontal-list">
     <div v-if="contacts.length === 0" class="empty-message">暂无联系人</div>
     <ContactItem
       v-for="contact in contacts"
@@ -54,6 +54,17 @@ const handleContactClick = (contact) => {
 <style scoped>
 .contact-list {
   border-top: 1px solid #eee;
+}
+
+.horizontal-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* 卡片之间的间距 */
+}
+
+.horizontal-list .contact-card {
+  flex-basis: calc((100% - 5 * 15px) / 6); /* 一行最多 6 个元素，减去间距 */
+  box-sizing: border-box;
 }
 
 .empty-message {

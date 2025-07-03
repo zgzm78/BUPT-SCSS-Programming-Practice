@@ -13,10 +13,10 @@
             <!-- 判断消息类型 -->
             <span v-if="message.message.type === 'text'">{{ message.message.content }}</span>
             <!-- 图片消息 -->
-            <img 
-              v-if="message.message.type === 'picture'" 
-              :src="message.message.content" 
-              alt="图片" 
+            <img
+              v-if="message.message.type === 'picture'"
+              :src="message.message.content"
+              alt="图片"
               @error="handleImageError(message)"
               @click="openImageModal(message.message.content)"
               class="chat-image"
@@ -40,9 +40,9 @@
       <!-- 图片模态框 -->
       <div v-if="isImageModalOpen" class="image-modal" @click="closeImageModal">
         <div class="image-modal-content" @click.stop>
-          <img 
-            :src="currentImage" 
-            alt="大图" 
+          <img
+            :src="currentImage"
+            alt="大图"
             class="modal-image"
             :style="{ transform: `scale(${scale})` }"
             @wheel="handleMouseWheel"
@@ -222,9 +222,12 @@ const handleKeyDown = (event) => {
 .content-area {
   flex: 1;
   padding: 20px;
-  background-color: #f4f4f4;
   display: flex;
   flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.44);
+  border-radius: 8px;
+  margin: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .chat-messages {
@@ -286,12 +289,17 @@ const handleKeyDown = (event) => {
   border: none;
   border-radius: 0 4px 4px 0;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.chat-input button:hover {
+  background-color: #06a453;
 }
 
 .chat-image {
-  width: 150px; 
-  height: 150px; 
-  object-fit: cover; 
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
   cursor: pointer;
 }
 

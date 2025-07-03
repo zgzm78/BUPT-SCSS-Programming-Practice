@@ -246,7 +246,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, rgba(238, 119, 82, 0.61), rgba(231, 60, 126, 0.62), rgba(35, 166, 213, 0.79), rgba(35, 213, 171, 0.78));
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   border-radius: 8px;
