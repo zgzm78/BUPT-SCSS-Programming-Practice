@@ -4,7 +4,7 @@
     <div class="content-area">
       <h2>通讯录</h2>
       <div v-if="error" class="error-message">{{ error }}</div>
-      
+
       <div class="add-contact-form">
         <input
           type="text"
@@ -13,9 +13,9 @@
         />
         <button @click="handleAddContact">添加好友</button>
       </div>
-      
+
       <div v-if="loading">加载中...</div>
-      <ContactList 
+      <ContactList
         v-else
         :contacts="contacts"
         @delete-contact="handleDeleteContact"
@@ -57,7 +57,7 @@ const fetchContacts = async () => {
 
 const handleAddContact = async () => {
   if (!newContactUsername.value) return;
-  
+
   try {
     const response = await addContact({ friend_id: newContactUsername.value });
     if (response.data.status === 200) {
@@ -92,6 +92,11 @@ const handleDeleteContact = async (username) => {
 </script>
 
 <style scoped>
+.main-layout {
+  display: flex;
+  height: 100vh;
+}
+
 .add-contact-form {
   display: flex;
   margin-bottom: 20px;
@@ -102,6 +107,7 @@ const handleDeleteContact = async (username) => {
   padding: 8px 10px;
   border: 1px solid #ddd;
   border-radius: 4px 0 0 4px;
+  width: 1200px; /* 固定宽度 */
 }
 
 .add-contact-form button {
